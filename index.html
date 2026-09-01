@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나를 소개합니다</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080a0f;
+  color: #f5f7ff;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 20% 20%, #26386d55, transparent 35%),
+    radial-gradient(circle at 80% 70%, #6d3d8c44, transparent 35%);
+}
+
+.hero {
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #303746;
+  border-radius: 999px;
+  color: #9da8bc;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: clamp(48px, 9vw, 90px);
+  margin: 25px 0 15px;
+  letter-spacing: -5px;
+}
+
+.hero p {
+  color: #9da8bc;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.scroll {
+  margin-top: 60px;
+  color: #667084;
+  font-size: 13px;
+  animation: down 1.5s infinite;
+}
+
+@keyframes down {
+  50% { transform: translateY(8px); }
+}
+
+main {
+  width: min(1050px, calc(100% - 30px));
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title small {
+  color: #7897ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.title h2 {
+  margin: 5px 0;
+  font-size: 32px;
+}
+
+.card {
+  background: #11141b;
+  border: 1px solid #252b36;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px #00000030;
+}
+
+.languages {
+  display: grid;
+  gap: 10px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #171b23;
+  padding: 13px;
+  border-radius: 12px;
+}
+
+.number {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #7897ff18;
+  color: #7897ff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.interest {
+  padding: 22px;
+  border-radius: 15px;
+  background: #171b23;
+  border: 1px solid #252b36;
+}
+
+.interest h3 {
+  margin: 0 0 7px;
+}
+
+.interest p {
+  margin: 0;
+  color: #8993a5;
+  font-size: 14px;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tool-box h3 {
+  margin-top: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 9px 13px;
+  background: #171b23;
+  border: 1px solid #2a303c;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.likes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.like {
+  min-height: 160px;
+  padding: 25px;
+  background: #11141b;
+  border: 1px solid #252b36;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .2s;
+}
+
+.like:hover {
+  transform: translateY(-5px);
+  border-color: #46516a;
+}
+
+.like strong {
+  font-size: 20px;
+}
+
+.like span {
+  color: #7f899b;
+  font-size: 13px;
+}
+
+footer {
+  border-top: 1px solid #202530;
+  text-align: center;
+  padding: 30px;
+  color: #687181;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .interests,
+  .tool-grid,
+  .likes {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="badge">PERSONAL PROFILE</div>
+
+    <h1>나를 소개합니다.</h1>
+
+    <p>
+      프로그래밍을 좋아하고<br>
+      시스템부터 그래픽, 파일 포맷, 프로토콜까지<br>
+      이것저것 만드는 사람입니다.
+    </p>
+
+    <div class="scroll">SCROLL ↓</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 좋아하는 프로그래밍 언어 -->
+  <section>
+    <div class="title">
+      <small>01 · FAVORITE LANGUAGES</small>
+      <h2>좋아하는 프로그래밍 언어</h2>
+    </div>
+
+    <div class="card">
+      <div class="languages">
+
+        <div class="language">
+          <div class="number">01</div>
+          <b>C</b>
+        </div>
+
+        <div class="language">
+          <div class="number">02</div>
+          <b>C++</b>
+        </div>
+
+        <div class="language">
+          <div class="number">03</div>
+          <b>C#</b>
+        </div>
+
+        <div class="language">
+          <div class="number">04</div>
+          <b>Rust</b>
+        </div>
+
+        <div class="language">
+          <div class="number">05</div>
+          <b>JavaScript</b>
+        </div>
+
+        <div class="language">
+          <div class="number">06</div>
+          <b>엄랭</b>
+        </div>
+
+        <div class="language">
+          <div class="number">07</div>
+          <b>Luau</b>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 관심 분야 -->
+  <section>
+    <div class="title">
+      <small>02 · INTERESTS</small>
+      <h2>관심 분야</h2>
+    </div>
+
+    <div class="interests">
+
+      <div class="interest">
+        <h3>시스템 프로그래밍</h3>
+        <p>컴퓨터의 내부 동작과 시스템을 직접 다루는 것</p>
+      </div>
+
+      <div class="interest">
+        <h3>그래픽</h3>
+        <p>화면에 그림과 인터페이스를 만들어내는 것</p>
+      </div>
+
+      <div class="interest">
+        <h3>파일 포맷</h3>
+        <p>데이터를 저장하고 표현하는 구조를 만드는 것</p>
+      </div>
+
+      <div class="interest">
+        <h3>프로토콜</h3>
+        <p>프로그램과 시스템이 통신하는 규칙</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 언어 & 도구 -->
+  <section>
+    <div class="title">
+      <small>03 · LANGUAGES & TOOLS</small>
+      <h2>언어 & 도구</h2>
+    </div>
+
+    <div class="tool-grid">
+
+      <div class="card tool-box">
+        <h3>Languages</h3>
+
+        <div class="tags">
+          <span class="tag">C</span>
+          <span class="tag">C++</span>
+          <span class="tag">C#</span>
+          <span class="tag">Rust</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">엄랭</span>
+          <span class="tag">Luau</span>
+        </div>
+      </div>
+
+      <div class="card tool-box">
+        <h3>Tools</h3>
+
+        <div class="tags">
+          <span class="tag">QEMU</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">선풍기</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 좋아하는 것 -->
+  <section>
+    <div class="title">
+      <small>04 · THINGS I LIKE</small>
+      <h2>좋아하는 것</h2>
+    </div>
+
+    <div class="likes">
+
+      <div class="like">
+        <strong>발로 코딩하기</strong>
+        <span>일단 만들고 생각하기</span>
+      </div>
+
+      <div class="like">
+        <strong>뇌 빼고 유튜브 하기</strong>
+        <span>아무 생각 없이 쉬기</span>
+      </div>
+
+      <div class="like">
+        <strong>뇌 넣고 게임하기</strong>
+        <span>제대로 집중해서 게임하기</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> · Personal Profile
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const cards = document.querySelectorAll(".card, .interest, .like");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+cards.forEach(card => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(20px)";
+  card.style.transition = "opacity .6s ease, transform .6s ease";
+  observer.observe(card);
+});
+</script>
+
+</body>
+</html>
